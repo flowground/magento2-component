@@ -1,0 +1,42 @@
+{
+    "title":"Magento REST API",
+    "description" : "Magento rest api",
+    "url" : "http://elasticio-magento.herokuapp.com",
+    "env": [
+        "MAGENTO_KEY",
+        "MAGENTO_SECRET"
+    ],
+    "credentials" : {
+        "fields":{
+            "prodEnv" : {
+                "label":"Environment",
+                "viewClass":"SelectView",
+                "required":true,
+                "model":{
+                    "test":"Sandbox",
+                    "login":"Production"
+                },
+                "prompt":"Select environment"
+            },
+            "oauth":{
+                "label":"Authentication",
+                "viewClass":"OAuthFieldView",
+                "required": true
+            }
+        },
+        "oauth2":{
+            "client_id":"{{MAGENTO_KEY}}",
+            "client_secret":"{{MAGENTO_SECRET}}",
+            "auth_uri":"http://elasticio-magento.herokuapp.com/oauth/token/request",
+            "token_uri":"http://elasticio-magento.herokuapp.com/oauth/token/access"
+        }
+    },
+    "triggers":{
+        "getProducts":{
+            "title":"Get products",
+            "main":"./lib/triggers/getProducts.js",
+            "type":"polling",
+            "dynamicMetadata":true
+        }
+    }
+}

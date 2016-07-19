@@ -1,0 +1,30 @@
+{
+  "name": "magento",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/standard/bin/cmd.js && ./node_modules/mocha/bin/mocha --recursive spec"
+  },
+  "standard": {
+    "globals": [
+      "it",
+      "describe",
+      "before"
+    ]
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3",
+    "nock": "^8.0.0",
+    "sinon": "^1.17.4"
+  },
+  "dependencies": {
+    "asyncawait": "^1.0.6",
+    "axios": "^0.12.0",
+    "elasticio-node": "0.0.7",
+    "elasticio-sailor-nodejs": "^1.2.2"
+  }
+}
