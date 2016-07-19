@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/standard/bin/cmd.js && ./node_modules/mocha/bin/mocha --recursive spec"
+    "test": "./node_modules/mocha/bin/mocha --recursive spec"
   },
   "standard": {
     "globals": [
