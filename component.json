@@ -27,7 +27,7 @@
         "oauth2":{
             "client_id":"{{MAGENTO_KEY}}",
             "client_secret":"{{MAGENTO_SECRET}}",
-            "auth_uri":"http://elasticio-magento.herokuapp.com/index.php/oauth/initiate",
+            "auth_uri":"http://elasticio-magento.herokuapp.com/index.php/admin/oAuth_authorize",
             "token_uri":"http://elasticio-magento.herokuapp.com/index.php/oauth/token"
         }
     },
