@@ -27,7 +27,10 @@
         "getProducts":{
             "title":"Get products",
             "main":"./lib/triggers/getProducts.js",
-            "type":"polling"
+            "type":"polling",
+            "metadata": {
+                "out": "./lib/schemas/getProducts.out.json"
+            }
         }
     }
 }
