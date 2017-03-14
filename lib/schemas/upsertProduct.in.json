@@ -1,0 +1,55 @@
+{
+    "type": "object",
+    "properties": {
+        "sku": {
+          "type": "string",
+          "required": true,
+          "title": "Sku"
+        },
+        "name": {
+            "type": "string",
+            "required": true,
+            "title": "Name"
+        },
+        "price": {
+            "type": "string",
+            "required": true,
+            "title": "Price"
+        },
+        "attribute_set_name": {
+            "type": "string",
+            "required": true,
+            "title": "Attribute Set Name"
+        },
+        "weight": {
+            "type": "string",
+            "required": true,
+            "title": "Weight"
+        },
+        "attributes": {
+            "type": "array",
+            "properties": {
+                "label": {
+                    "type": "string",
+                    "required": true,
+                    "title": "Attribute Label"
+                },
+                "key": {
+                    "type": "string",
+                    "required": true,
+                    "title": "Attribute Key"
+                },
+                "type": {
+                    "type": "string",
+                    "required": true,
+                    "title": "Attribute Type(text/select/multiselect)"
+                },
+                "value":{
+                    "type": "string",
+                    "required": true,
+                    "title": "Attribute Value"
+                }
+            }
+        }
+    }
+}
