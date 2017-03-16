@@ -32,7 +32,7 @@
                 "out": "./lib/schemas/upsertProduct.out.json"
             }
         }
-    }
+    },
     "triggers":{
         "getProducts":{
             "title":"Get products",
