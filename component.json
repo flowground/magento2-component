@@ -23,6 +23,16 @@
           }
         }
     },
+    "actions": {
+        "upsertProduct": {
+            "title": "upsertProduct",
+            "main": "./lib/actions/upsertProduct.js",
+            "metadata": {
+                "in": "./lib/schemas/upsertProduct.in.json",
+                "out": "./lib/schemas/upsertProduct.out.json"
+            }
+        }
+    }
     "triggers":{
         "getProducts":{
             "title":"Get products",
