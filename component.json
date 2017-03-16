@@ -25,7 +25,7 @@
     },
     "actions": {
         "upsertProduct": {
-            "title": "upsertProduct",
+            "title": "Create/Update Product",
             "main": "./lib/actions/upsertProduct.js",
             "metadata": {
                 "in": "./lib/schemas/upsertProduct.in.json",
