@@ -24,7 +24,7 @@
     "asyncawait": "^1.0.6",
     "axios": "^0.15.3",
     "elasticio-node": "0.0.5",
-    "elasticio-sailor-nodejs": "*",
+    "elasticio-sailor-nodejs": "2.0.1",
     "eslint": "^3.16.1",
     "q": "^1.4.1"
   },
@@ -35,6 +35,9 @@
     "mocha": "^3.2.0",
     "nock": "^9.0.9",
     "sinon": "^1.17.7"
+  },
+  "engines": {
+    "node" : "7.7.4"
   },
   "eslintConfig": {
     "extends": "xo-space",
