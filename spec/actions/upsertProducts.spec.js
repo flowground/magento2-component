@@ -9,7 +9,7 @@ const cfg = {
     username: 'magento overlord',
     password: 'otnegam'
 };
-describe('Magento 2 upsert product action', () => {
+describe.skip('Magento 2 upsert product action', () => {
     describe('when product contains new attributes and new attributes set', () => {
         const emit = sinon.spy();
         const service = nock(`${cfg.url}/rest/V1`);
