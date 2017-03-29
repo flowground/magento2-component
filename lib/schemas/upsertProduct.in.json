@@ -50,6 +50,21 @@
                     "title": "Attribute Value"
                 }
             }
+        },
+        "categories": {
+            "type": "array",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "required": true,
+                    "title": "Category Name"
+                },
+                "path": {
+                    "type": "string",
+                    "required": true,
+                    "title": "Category Path"
+                }
+            }
         }
     }
 }
