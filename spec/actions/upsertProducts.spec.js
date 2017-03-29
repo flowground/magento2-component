@@ -9,7 +9,7 @@ const cfg = {
     username: 'magento overlord',
     password: 'otnegam'
 };
-describe.skip('Magento 2 upsert product action', () => {
+describe('Magento 2 upsert product action', () => {
     describe('when product contains new attributes and new attributes set', () => {
         const emit = sinon.spy();
         const service = nock(`${cfg.url}/rest/V1`);
@@ -332,7 +332,6 @@ describe.skip('Magento 2 upsert product action', () => {
                 }]
             }
         }, cfg));
-        service.post('/integration/admin/token').reply(200, 'authtoken');
         it('should emit error', () => {
             emit.getCall(0).args[0].should.be.eq('error');
             emit.getCall(0).args[1].should.be.eq('some server error');

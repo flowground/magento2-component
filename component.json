@@ -31,15 +31,31 @@
                 "in": "./lib/schemas/upsertProduct.in.json",
                 "out": "./lib/schemas/upsertProduct.out.json"
             }
+        },
+        "upsertPrices": {
+            "title": "Create/Update Prices",
+            "main": "./lib/actions/upsertPrices.js",
+            "metadata": {
+                "in": "./lib/schemas/upsertPrices.in.json",
+                "out": "./lib/schemas/upsertPrices.out.json"
+            }
         }
     },
     "triggers":{
         "getProducts":{
-            "title":"Get products",
+            "title":"Get Products",
             "main":"./lib/triggers/getProducts.js",
             "type":"polling",
             "metadata": {
                 "out": "./lib/schemas/getProducts.out.json"
+            }
+        },
+        "getCustomers":{
+            "title":"Get Customers",
+            "main":"./lib/triggers/getCustomers.js",
+            "type":"polling",
+            "metadata": {
+                "out": "./lib/schemas/getCustomers.out.json"
             }
         }
     }
