@@ -17,7 +17,7 @@
           },
           "url": {
               "viewClass": "TextFieldView",
-              "label": "Password",
+              "label": "URL",
               "required": true,
               "placeholder": "Instance URL"
           }
