@@ -26,7 +26,7 @@
             "required": true,
             "title": "Weight"
         },
-        "attributes": {
+        "attrs": {
             "type": "array",
             "properties": {
                 "label": {
