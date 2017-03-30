@@ -59,7 +59,7 @@ describe('Magento 2 upsert product action', () => {
                 price: 10.1,
                 attribute_set_name: 'some set',
                 weight: 1,
-                attributes: [{
+                attrs: [{
                     label: 'Color',
                     key: 'color',
                     value: 'color of emptyness',
@@ -149,7 +149,7 @@ describe('Magento 2 upsert product action', () => {
                 price: 10.1,
                 attribute_set_name: 'Default',
                 weight: 1,
-                attributes: [{
+                attrs: [{
                     label: 'Color',
                     key: 'color',
                     value: 'sandy',
@@ -214,7 +214,7 @@ describe('Magento 2 upsert product action', () => {
                 price: 10.1,
                 attribute_set_name: 'Default',
                 weight: 1,
-                attributes: [{
+                attrs: [{
                     label: 'Color',
                     key: 'color',
                     value: 'color of emptiness',
@@ -286,7 +286,7 @@ describe('Magento 2 upsert product action', () => {
                 price: 9.1,
                 attribute_set_name: 'Default',
                 weight: 1,
-                attributes: [{
+                attrs: [{
                     label: 'Color',
                     key: 'color',
                     value: 'color of emptiness',
@@ -324,7 +324,7 @@ describe('Magento 2 upsert product action', () => {
                 price: 10.1,
                 attribute_set_name: 'Default',
                 weight: 1,
-                attributes: [{
+                attrs: [{
                     label: 'Color',
                     key: 'color',
                     value: 'color of emptiness',
