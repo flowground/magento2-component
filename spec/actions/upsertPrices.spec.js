@@ -20,6 +20,7 @@ describe('Magento 2 upsert prices action', () => {
                 id: 1
             }]
         });
+        service.get('/products/F000015471').reply(200, true);
         service.post('/products/F000015471/group-prices/1/tiers/8/price/192').reply(201, true);
         before(() => action.process.bind({emit})({
             body: {
