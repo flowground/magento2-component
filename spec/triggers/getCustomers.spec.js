@@ -29,7 +29,7 @@ describe('Magento 2 get customers trigger', () => {
                 }
             ]
         });
-        before(() => action.process.bind({emit})({}, cfg));
+        before(() => action.process.bind({emit})({}, cfg, {}));
         it('should fetch customers', () => {
             const requestFailed = !service.isDone() && service.pendingMocks()
                     .includes('GET http://localhost:80/rest/V1/customerGroups/search?searchCriteria');
@@ -46,7 +46,7 @@ describe('Magento 2 get customers trigger', () => {
         });
         it('should emit snapshot', () => {
             emit.getCall(1).args[0].should.be.eq('snapshot');
-            emit.getCall(1).args[1].should.be.eq('2017-03-26 10:50:40');
+            emit.getCall(1).args[1].should.be.deep.eq({updated_at: '2017-03-26 10:50:40'});
         });
         it('should end', () => {
             emit.getCall(2).args[0].should.be.eq('end');
@@ -56,7 +56,7 @@ describe('Magento 2 get customers trigger', () => {
         const emit = sinon.spy();
         const service = nock(`${cfg.url}/rest/V1`);
         service.post('/integration/admin/token').reply(501, 'some server error')
-        before(() => action.process.bind({emit})({}, cfg));
+        before(() => action.process.bind({emit})({}, cfg, {}));
         it('should emit error', () => {
             emit.getCall(0).args[0].should.be.eq('error');
             emit.getCall(0).args[1].should.be.eq('some server error');
