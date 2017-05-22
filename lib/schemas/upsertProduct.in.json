@@ -2,14 +2,19 @@
     "type": "object",
     "properties": {
         "sku": {
-          "type": "string",
-          "required": true,
-          "title": "Sku"
+            "type": "string",
+            "required": true,
+            "title": "Sku"
         },
         "name": {
             "type": "string",
             "required": true,
             "title": "Name"
+        },
+        "qty": {
+            "type": "string",
+            "required": true,
+            "title": "Quantity"
         },
         "price": {
             "type": "string",
@@ -44,10 +49,20 @@
                     "required": true,
                     "title": "Attribute Type(text/select/multiselect)"
                 },
-                "value":{
+                "value": {
                     "type": "string",
                     "required": true,
                     "title": "Attribute Value"
+                }
+            }
+        },
+        "i,ages": {
+            "type": "array",
+            "properties": {
+                "url": {
+                    "type": "string",
+                    "required": true,
+                    "title": "Image URL"
                 }
             }
         },

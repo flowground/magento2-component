@@ -149,6 +149,7 @@ describe('Magento 2 upsert product action', () => {
                 price: 10.1,
                 attribute_set_name: 'Default',
                 weight: 1,
+                qty: 10,
                 attrs: [{
                     label: 'Color',
                     key: 'color',
@@ -172,6 +173,12 @@ describe('Magento 2 upsert product action', () => {
                         124
                     ]
                 }],
+                "extensionAttributes": {
+                    "stockItem": {
+                        "isInStock": true,
+                        "qty": 10
+                    }
+                },
                 name: 'cap',
                 price: 10.1,
                 sku: 'cap',
@@ -214,6 +221,7 @@ describe('Magento 2 upsert product action', () => {
                 price: 10.1,
                 attribute_set_name: 'Default',
                 weight: 1,
+                qty: 10,
                 attrs: [{
                     label: 'Color',
                     key: 'color',
@@ -232,6 +240,12 @@ describe('Magento 2 upsert product action', () => {
                         123
                     ]
                 }],
+                "extensionAttributes": {
+                    "stockItem": {
+                        "isInStock": true,
+                        "qty": 10
+                    }
+                },
                 name: 'cap',
                 price: 10.1,
                 sku: 'cap',
@@ -286,6 +300,7 @@ describe('Magento 2 upsert product action', () => {
                 price: 9.1,
                 attribute_set_name: 'Default',
                 weight: 1,
+                qty: 10,
                 attrs: [{
                     label: 'Color',
                     key: 'color',
@@ -304,6 +319,12 @@ describe('Magento 2 upsert product action', () => {
                         123
                     ]
                 }],
+                "extensionAttributes": {
+                    "stockItem": {
+                        "isInStock": true,
+                        "qty": 10
+                    }
+                },
                 name: 'Cap',
                 price: 9.1,
                 weight: 1
