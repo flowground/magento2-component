@@ -56,7 +56,7 @@
                 }
             }
         },
-        "i,ages": {
+        "images": {
             "type": "array",
             "properties": {
                 "url": {
