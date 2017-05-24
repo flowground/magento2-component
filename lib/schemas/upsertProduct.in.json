@@ -57,14 +57,9 @@
             }
         },
         "images": {
-            "type": "array",
-            "properties": {
-                "url": {
-                    "type": "string",
-                    "required": true,
-                    "title": "Image URL"
-                }
-            }
+            "type": "string",
+            "required": true,
+            "title": "Image URL"
         },
         "cats": {
             "type": "string",
