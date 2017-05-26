@@ -56,7 +56,7 @@
                 }
             }
         },
-        "images": {
+        "imagesString": {
             "type": "string",
             "required": true,
             "title": "Image URL"
