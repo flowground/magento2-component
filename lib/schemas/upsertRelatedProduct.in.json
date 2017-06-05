@@ -1,0 +1,26 @@
+{
+    "type": "object",
+    "properties": {
+        "sku": {
+            "type": "string",
+            "required": true,
+            "title": "Sku"
+        },
+        "pieces": {
+            "type": "array",
+            "properties": {
+                "qty": {
+                    "type": "string",
+                    "required": true,
+                    "title": "Quantity"
+                },
+                "sku": {
+                    "type": "string",
+                    "required": true,
+                    "title": "Related Product Sku"
+                }
+            }
+        }
+
+    }
+}

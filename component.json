@@ -47,6 +47,21 @@
                 "in": "./lib/schemas/upsertPricesBatch.in.json",
                 "out": "./lib/schemas/upsertPricesBatch.out.json"
             }
+        },
+        "upsertRelatedProduct": {
+            "title": "Upsert Related Products",
+            "main": "./lib/actions/upsertRelatedProduct.js",
+            "fields": {
+                "priceMultiplier": {
+                    "label": "Price Multiplier",
+                    "required": true,
+                    "viewClass": "TextFieldView"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/upsertRelatedProduct.in.json",
+                "out": "./lib/schemas/upsertRelatedProduct.out.json"
+            }
         }
     },
     "triggers":{
