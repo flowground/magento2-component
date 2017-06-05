@@ -1,0 +1,10 @@
+{
+    "type": "object",
+    "properties": {
+        "ok": {
+            "type": "string",
+            "required": true,
+            "title": "Ok"
+        }
+    }
+}

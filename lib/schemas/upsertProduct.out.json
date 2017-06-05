@@ -1,0 +1,55 @@
+{
+    "type": "object",
+    "properties": {
+        "sku": {
+            "type": "string",
+            "required": true,
+            "title": "Sku"
+        },
+        "name": {
+            "type": "string",
+            "required": true,
+            "title": "Name"
+        },
+        "price": {
+            "type": "string",
+            "required": true,
+            "title": "Price"
+        },
+        "attribute_set_id": {
+            "type": "string",
+            "required": true,
+            "title": "Attribute Set Id"
+        },
+        "weight": {
+            "type": "string",
+            "required": true,
+            "title": "Weight"
+        },
+        "created_at": {
+            "type": "string",
+            "required": true,
+            "title": "Created At"
+        },
+        "updated_at": {
+            "type": "string",
+            "required": true,
+            "title": "Updated At"
+        },
+        "custom_attributes": {
+            "type": "array",
+            "properties": {
+                "attribute_code": {
+                    "type": "string",
+                    "required": true,
+                    "title": "Attribute Code"
+                },
+                "value":{
+                    "type": "string",
+                    "required": true,
+                    "title": "Attribute Value"
+                }
+            }
+        }
+    }
+}
