@@ -39,6 +39,14 @@
                 "in": "./lib/schemas/upsertPrices.in.json",
                 "out": "./lib/schemas/upsertPrices.out.json"
             }
+        },
+        "upsertPricesBatch": {
+            "title": "Create/Update Prices Batch",
+            "main": "./lib/actions/upsertPricesBatch.js",
+            "metadata": {
+                "in": "./lib/schemas/upsertPricesBatch.in.json",
+                "out": "./lib/schemas/upsertPricesBatch.out.json"
+            }
         }
     },
     "triggers":{
