@@ -52,6 +52,19 @@ describe('Magento 2 upsert product action', () => {
                 type: 'multiselect'
             }]
         })
+        service.put('/products/cap').reply(201, {
+            name: 'cap',
+            sku: 'cap',
+            price: 10.1,
+            weight: 1,
+            attributeSetId: 'some set',
+            customAttributes: [{
+                label: 'Color',
+                key: 'color',
+                value: 'color of emptyness',
+                type: 'multiselect'
+            }]
+        })
         before(() => action.process.bind({emit})({
             body: {
                 name: 'cap',
@@ -85,18 +98,19 @@ describe('Magento 2 upsert product action', () => {
         it('should emit a new product', () => {
             emit.getCall(0).args[0].should.be.eq('data');
             emit.getCall(0).args[1].body.should.be.deep.eq({
-                attributeSetId: 'some set',
-                customAttributes: [{
-                        'key': 'color',
-                        'label': 'Color',
-                        'type': 'multiselect',
-                        'value': 'color of emptyness'
+                "attributeSetId": "some set",
+                "customAttributes": [
+                    {
+                        "key": "color",
+                        "label": "Color",
+                        "type": "multiselect",
+                        "value": "color of emptyness",
                     }
                 ],
-                name: 'cap',
-                price: 10.1,
-                sku: 'cap',
-                weight: 1
+                "name": "cap",
+                "price": 10.1,
+                "sku": "cap",
+                "weight": 1
             });
         });
         it('should end', () => {
@@ -142,6 +156,7 @@ describe('Magento 2 upsert product action', () => {
         });
         service.get('/products/cap').reply(404, 'Not found');
         service.post('/products/').reply(201, (uri, body) => body);
+        service.put('/products/cap').reply(201, (uri, body) => body);
         before(() => action.process.bind({emit})({
             body: {
                 name: 'cap',
@@ -214,6 +229,7 @@ describe('Magento 2 upsert product action', () => {
         });
         service.get('/products/cap').reply(404, 'Not found');
         service.post('/products/').reply(201, (uri, body) => body);
+        service.put('/products/cap').reply(201, (uri, body) => body);
         before(() => action.process.bind({emit})({
             body: {
                 name: 'cap',
@@ -310,6 +326,7 @@ describe('Magento 2 upsert product action', () => {
             }
         }, cfg));
         it('should emit product', () => {
+            console.log(emit.getCall(0).args[1])
             emit.getCall(0).args[0].should.be.eq('data');
             emit.getCall(0).args[1].body.product.should.be.deep.eq({
                 attributeSetId: 4,
