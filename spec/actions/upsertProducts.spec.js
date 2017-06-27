@@ -191,7 +191,8 @@ describe('Magento 2 upsert product action', () => {
                 "extensionAttributes": {
                     "stockItem": {
                         "isInStock": true,
-                        "qty": 10
+                        "qty": 10,
+                        isQtyDecimal: true
                     }
                 },
                 name: 'cap',
@@ -259,7 +260,8 @@ describe('Magento 2 upsert product action', () => {
                 "extensionAttributes": {
                     "stockItem": {
                         "isInStock": true,
-                        "qty": 10
+                        "qty": 10,
+                        isQtyDecimal: true
                     }
                 },
                 name: 'cap',
@@ -339,7 +341,8 @@ describe('Magento 2 upsert product action', () => {
                 "extensionAttributes": {
                     "stockItem": {
                         "isInStock": true,
-                        "qty": 10
+                        "qty": 10,
+                        isQtyDecimal: true
                     }
                 },
                 name: 'Cap',
