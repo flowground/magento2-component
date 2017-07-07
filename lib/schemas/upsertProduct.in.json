@@ -11,6 +11,11 @@
             "required": true,
             "title": "Name"
         },
+        "url": {
+            "type": "string",
+            "required": true,
+            "title": "URL"
+        },
         "qty": {
             "type": "string",
             "required": true,
