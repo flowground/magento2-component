@@ -66,6 +66,11 @@
             "required": true,
             "title": "Image URL"
         },
+        "mainPicture": {
+            "type": "string",
+            "required": true,
+            "title": "Main Image"
+        },
         "cats": {
             "type": "string",
             "required": true,
