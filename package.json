@@ -13,7 +13,7 @@
   ],
   "main": "lib/index.js",
   "scripts": {
-    "test": "exit 0;NODE_ENV=test ./node_modules/mocha/bin/mocha --recursive spec",
+    "test": "NODE_ENV=test ./node_modules/mocha/bin/mocha --recursive spec",
     "coverage": "NODE_ENV=test ./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha --recursive ./spec/*"
   },
   "keywords": [
