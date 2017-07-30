@@ -21,6 +21,11 @@
             "required": true,
             "title": "Quantity"
         },
+        "status": {
+            "type": "string",
+            "required": true,
+            "title": "Status"
+        },
         "price": {
             "type": "string",
             "required": true,
