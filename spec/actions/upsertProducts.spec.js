@@ -182,6 +182,7 @@ describe('Magento 2 upsert product action', () => {
             emit.getCall(0).args[0].should.be.eq('data');
             emit.getCall(0).args[1].body.product.should.be.deep.eq({
                 attributeSetId: 4,
+                visibility: 4,
                 customAttributes: [{
                     attribute_code: 'color',
                     value: [
@@ -214,6 +215,7 @@ describe('Magento 2 upsert product action', () => {
                 attribute_code: 'color',
                 frontend_input: 'multiselect',
                 entity_type_id: 4,
+                visibility: 4,
                 is_required: false,
                 default_frontend_label: 'Color',
                 options: [{
@@ -264,6 +266,7 @@ describe('Magento 2 upsert product action', () => {
                         isQtyDecimal: true
                     }
                 },
+                visibility: 4,
                 name: 'cap',
                 price: 10.1,
                 sku: 'cap',
@@ -345,6 +348,7 @@ describe('Magento 2 upsert product action', () => {
                         isQtyDecimal: true
                     }
                 },
+                visibility: 4,
                 name: 'Cap',
                 price: 9.1,
                 weight: 1
