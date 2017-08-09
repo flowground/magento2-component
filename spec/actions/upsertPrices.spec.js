@@ -74,7 +74,7 @@ describe('Magento 2 upsert prices action', () => {
     describe('when something goes wrong', () => {
         const emit = sinon.spy();
         const service = nock(`${cfg.url}/rest/V1`);
-        service.post('/integration/admin/token').reply(501, 'some server error')
+        service.post('/integration/admin/token').reply(400, 'some server error')
         before(() => action.process.bind({emit})({
             body: {
                 qty: 8,
