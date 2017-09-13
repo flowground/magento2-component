@@ -379,7 +379,7 @@ describe('Magento 2 upsert product action', () => {
         }, cfg));
         it('should emit error', () => {
             emit.getCall(0).args[0].should.be.eq('error');
-            emit.getCall(0).args[1].should.be.eq('some server error');
+            emit.getCall(0).args[1].message.should.be.eq('Request failed with status code 501');
         });
         it('should emit end', () => {
             emit.getCall(1).args[0].should.be.eq('end');
