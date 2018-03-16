@@ -1,0 +1,9 @@
+{
+	"type": "object",
+	"properties": {
+		"responseData": {
+			"type": "number",
+			"description": "gallery entry ID"
+		}
+	}
+}

@@ -1,0 +1,9 @@
+{
+	"type": "object",
+	"properties": {
+		"responseData": {
+			"type": "boolean",
+			"description": "true on success"
+		}
+	}
+}

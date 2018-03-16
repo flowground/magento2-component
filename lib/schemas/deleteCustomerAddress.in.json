@@ -1,0 +1,14 @@
+{
+	"type": "object",
+	"properties": {
+		"path": {
+			"type": "object",
+			"properties": {
+				"addressId": {
+					"type": "number",
+					"required": true
+				}
+			}
+		}
+	}
+}

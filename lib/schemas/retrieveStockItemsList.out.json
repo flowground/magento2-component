@@ -1,0 +1,215 @@
+{
+	"type": "object",
+	"properties": {
+		"responseData": {
+			"type": "object",
+			"description": "Stock Status collection interface",
+			"properties": {
+				"items": {
+					"type": "array",
+					"description": "Items",
+					"required": true,
+					"items": {
+						"type": "object",
+						"description": "Interface StockStatusInterface",
+						"properties": {
+							"product_id": {
+								"type": "number"
+							},
+							"stock_id": {
+								"type": "number"
+							},
+							"qty": {
+								"type": "number"
+							},
+							"stock_status": {
+								"type": "number"
+							},
+							"stock_item": {
+								"type": "object",
+								"description": "Interface StockItem",
+								"properties": {
+									"item_id": {
+										"type": "number"
+									},
+									"product_id": {
+										"type": "number"
+									},
+									"stock_id": {
+										"type": "number",
+										"description": "Stock identifier"
+									},
+									"qty": {
+										"type": "number"
+									},
+									"is_in_stock": {
+										"type": "boolean",
+										"description": "Stock Availability"
+									},
+									"is_qty_decimal": {
+										"type": "boolean"
+									},
+									"show_default_notification_message": {
+										"type": "boolean"
+									},
+									"use_config_min_qty": {
+										"type": "boolean"
+									},
+									"min_qty": {
+										"type": "number",
+										"description": "Minimal quantity available for item status in stock"
+									},
+									"use_config_min_sale_qty": {
+										"type": "number"
+									},
+									"min_sale_qty": {
+										"type": "number",
+										"description": "Minimum Qty Allowed in Shopping Cart or NULL when there is no limitation"
+									},
+									"use_config_max_sale_qty": {
+										"type": "boolean"
+									},
+									"max_sale_qty": {
+										"type": "number",
+										"description": "Maximum Qty Allowed in Shopping Cart data wrapper"
+									},
+									"use_config_backorders": {
+										"type": "boolean"
+									},
+									"backorders": {
+										"type": "number",
+										"description": "Backorders status"
+									},
+									"use_config_notify_stock_qty": {
+										"type": "boolean"
+									},
+									"notify_stock_qty": {
+										"type": "number",
+										"description": "Notify for Quantity Below data wrapper"
+									},
+									"use_config_qty_increments": {
+										"type": "boolean"
+									},
+									"qty_increments": {
+										"type": "number",
+										"description": "Quantity Increments data wrapper"
+									},
+									"use_config_enable_qty_inc": {
+										"type": "boolean"
+									},
+									"enable_qty_increments": {
+										"type": "boolean",
+										"description": "Whether Quantity Increments is enabled"
+									},
+									"use_config_manage_stock": {
+										"type": "boolean"
+									},
+									"manage_stock": {
+										"type": "boolean",
+										"description": "Can Manage Stock"
+									},
+									"low_stock_date": {
+										"type": "string"
+									},
+									"is_decimal_divided": {
+										"type": "boolean"
+									},
+									"stock_status_changed_auto": {
+										"type": "number"
+									},
+									"extension_attributes": {
+										"type": "object",
+										"description": "ExtensionInterface class for @see \\Magento\\CatalogInventory\\Api\\Data\\StockItemInterface"
+									}
+								}
+							},
+							"extension_attributes": {
+								"type": "object",
+								"description": "ExtensionInterface class for @see \\Magento\\CatalogInventory\\Api\\Data\\StockStatusInterface"
+							}
+						}
+					}
+				},
+				"search_criteria": {
+					"type": "object",
+					"description": "Interface StockStatusCriteriaInterface",
+					"required": true,
+					"properties": {
+						"mapper_interface_name": {
+							"type": "string",
+							"description": "Associated Mapper Interface name"
+						},
+						"criteria_list": {
+							"type": "array",
+							"description": "Criteria objects added to current Composite Criteria",
+							"items": {
+								"type": "object",
+								"description": "Interface CriteriaInterface",
+								"properties": {
+									"mapper_interface_name": {
+										"type": "string",
+										"description": "Associated Mapper Interface name"
+									},
+									"criteria_list": {
+										"type": "array",
+										"description": "Criteria objects added to current Composite Criteria",
+										"items": {
+											"type": "object"
+										}
+									},
+									"filters": {
+										"type": "array",
+										"description": "List of filters",
+										"items": {
+											"type": "string"
+										}
+									},
+									"orders": {
+										"type": "array",
+										"description": "Ordering criteria",
+										"items": {
+											"type": "string"
+										}
+									},
+									"limit": {
+										"type": "array",
+										"description": "Limit",
+										"items": {
+											"type": "string"
+										}
+									}
+								}
+							}
+						},
+						"filters": {
+							"type": "array",
+							"description": "List of filters",
+							"items": {
+								"type": "string"
+							}
+						},
+						"orders": {
+							"type": "array",
+							"description": "Ordering criteria",
+							"items": {
+								"type": "string"
+							}
+						},
+						"limit": {
+							"type": "array",
+							"description": "Limit",
+							"items": {
+								"type": "string"
+							}
+						}
+					}
+				},
+				"total_count": {
+					"required": true,
+					"type": "number",
+					"description": "Total count."
+				}
+			}
+		}
+	}
+}

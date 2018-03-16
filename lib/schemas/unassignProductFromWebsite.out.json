@@ -1,0 +1,9 @@
+{
+	"type": "object",
+	"properties": {
+		"responseData": {
+			"type": "boolean",
+			"description": "will returned True if website successfully unassigned from product"
+		}
+	}
+}

@@ -1,0 +1,26 @@
+{
+	"type": "object",
+	"properties": {
+		"query": {
+			"type": "object",
+			"properties": {
+				"scopeId": {
+					"type": "number",
+					"required": true
+				},
+				"qty": {
+					"type": "number",
+					"required": true
+				},
+				"currentPage": {
+					"type": "number",
+					"required": false
+				},
+				"pageSize": {
+					"type": "number",
+					"required": false
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,41 @@
+{
+	"type": "object",
+	"properties": {
+		"path": {
+			"type": "object",
+			"properties": {
+				"categoryId": {
+					"type": "string",
+					"required": true
+				}
+			}
+		},
+		"body": {
+			"properties": {
+				"productLink": {
+					"type": "object",
+					"description": "",
+					"properties": {
+						"sku": {
+							"type": "string"
+						},
+						"position": {
+							"type": "number"
+						},
+						"category_id": {
+							"type": "string",
+							"description": "Category id",
+							"required": true
+						},
+						"extension_attributes": {
+							"type": "object",
+							"description": "ExtensionInterface class for @see \\Magento\\Catalog\\Api\\Data\\CategoryProductLinkInterface"
+						}
+					},
+					"required": true
+				}
+			},
+			"type": "object"
+		}
+	}
+}

@@ -1,0 +1,23 @@
+{
+	"type": "object",
+	"properties": {
+		"path": {
+			"type": "object",
+			"properties": {
+				"productSku": {
+					"type": "string",
+					"required": true
+				}
+			}
+		},
+		"query": {
+			"type": "object",
+			"properties": {
+				"scopeId": {
+					"type": "number",
+					"required": false
+				}
+			}
+		}
+	}
+}

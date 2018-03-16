@@ -1,0 +1,42 @@
+{
+	"type": "object",
+	"properties": {
+		"query": {
+			"type": "object",
+			"properties": {
+				"searchCriteria[filterGroups][0][filters][0][field]": {
+					"type": "string",
+					"required": false
+				},
+				"searchCriteria[filterGroups][0][filters][0][value]": {
+					"type": "string",
+					"required": false
+				},
+				"searchCriteria[filterGroups][0][filters][0][conditionType]": {
+					"type": "string",
+					"required": false
+				},
+				"searchCriteria[sortOrders][0][field]": {
+					"type": "string",
+					"required": false
+				},
+				"searchCriteria[sortOrders][0][direction]": {
+					"type": "string",
+					"required": false
+				},
+				"searchCriteria[pageSize]": {
+					"type": "number",
+					"required": false
+				},
+				"searchCriteria[currentPage]": {
+					"type": "number",
+					"required": false
+				}
+			}
+		},
+		"queryString": {
+			"type": "string",
+			"required": false
+		}
+	}
+}

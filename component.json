@@ -1,0 +1,252 @@
+{
+    "title":"Magento REST API",
+    "description" : "Magento rest api",
+    "credentials" : {
+        "fields":{
+          "username": {
+              "viewClass": "TextFieldView",
+              "label": "Username",
+              "required": true,
+              "placeholder": "Paste username"
+          },
+          "password": {
+              "viewClass": "TextFieldView",
+              "label": "Password",
+              "required": true,
+              "placeholder": "Paste password"
+          },
+          "url": {
+              "viewClass": "TextFieldView",
+              "label": "URL",
+              "required": true,
+              "placeholder": "Instance URL"
+          }
+        }
+    },
+    "actions": {
+        "upsertProduct": {
+            "title": "Upsert Product",
+            "main": "./lib/actions/upsertProduct.js",
+            "metadata": {
+                "in": "./lib/schemas/upsertProduct.in.json",
+                "out": "./lib/schemas/upsertProduct.out.json"
+            }
+        },
+        "updateInventory": {
+            "title": "Update Inventory",
+            "main": "./lib/actions/updateInventory.js",
+            "metadata": {
+                "in": "./lib/schemas/updateInventory.in.json",
+                "out": "./lib/schemas/updateInventory.out.json"
+            }
+        },
+        "deleteProduct": {
+            "title": "Delete Product",
+            "main": "./lib/actions/deleteProduct.js",
+            "metadata": {
+                "in": "./lib/schemas/deleteProduct.in.json",
+                "out": "./lib/schemas/deleteProduct.out.json"
+            }
+        },
+        "createLink": {
+            "title": "Create Link",
+            "main": "./lib/actions/createLink.js",
+            "metadata": {
+                "in": "./lib/schemas/createLink.in.json",
+                "out": "./lib/schemas/createLink.out.json"
+            }
+        },
+        "updateLink": {
+            "title": "Update Link",
+            "main": "./lib/actions/updateLink.js",
+            "metadata": {
+                "in": "./lib/schemas/updateLink.in.json",
+                "out": "./lib/schemas/updateLink.out.json"
+            }
+        },
+        "retrieveProductsList": {
+            "title": "Retrieve products list",
+            "main": "./lib/actions/retrieveProductsList.js",
+            "metadata": {
+                "in": "./lib/schemas/retrieveProductsList.in.json",
+                "out": "./lib/schemas/retrieveProductsList.out.json"
+            }
+        },
+        "retrieveProduct": {
+            "title": "Retrieve product",
+            "main": "./lib/actions/retrieveProduct.js",
+            "metadata": {
+                "in": "./lib/schemas/retrieveProduct.in.json",
+                "out": "./lib/schemas/retrieveProduct.out.json"
+            }
+        },
+        "retrieveCustomersList": {
+            "title": "Retrieve customers list",
+            "main": "./lib/actions/retrieveCustomersList.js",
+            "metadata": {
+                "in": "./lib/schemas/retrieveCustomersList.in.json",
+                "out": "./lib/schemas/retrieveCustomersList.out.json"
+            }
+        },
+        "retrieveCustomer": {
+            "title": "Retrieve customer",
+            "main": "./lib/actions/retrieveCustomer.js",
+            "metadata": {
+                "in": "./lib/schemas/retrieveCustomer.in.json",
+                "out": "./lib/schemas/retrieveCustomer.out.json"
+            }
+        },
+        "createCustomer": {
+            "title": "Create customer",
+            "main": "./lib/actions/createCustomer.js",
+            "metadata": {
+                "in": "./lib/schemas/createCustomer.in.json",
+                "out": "./lib/schemas/createCustomer.out.json"
+            }
+        },
+        "updateCustomer": {
+            "title": "Update customer",
+            "main": "./lib/actions/updateCustomer.js",
+            "metadata": {
+                "in": "./lib/schemas/updateCustomer.in.json",
+                "out": "./lib/schemas/updateCustomer.out.json"
+            }
+        },
+        "deleteCustomer": {
+            "title": "Delete customer",
+            "main": "./lib/actions/deleteCustomer.js",
+            "metadata": {
+                "in": "./lib/schemas/deleteCustomer.in.json",
+                "out": "./lib/schemas/deleteCustomer.out.json"
+            }
+        },
+        "retrieveStockItem": {
+            "title": "Retrieve stock item",
+            "main": "./lib/actions/retrieveStockItem.js",
+            "metadata": {
+                "in": "./lib/schemas/retrieveStockItem.in.json",
+                "out": "./lib/schemas/retrieveStockItem.out.json"
+            }
+        },
+        "retrieveStockItemsList": {
+            "title": "Retrieve stock items list",
+            "main": "./lib/actions/retrieveStockItemsList.js",
+            "metadata": {
+                "in": "./lib/schemas/retrieveStockItemsList.in.json",
+                "out": "./lib/schemas/retrieveStockItemsList.out.json"
+            }
+        },
+        "updateStockItem": {
+            "title": "Update stock item",
+            "main": "./lib/actions/updateStockItem.js",
+            "metadata": {
+                "in": "./lib/schemas/updateStockItem.in.json",
+                "out": "./lib/schemas/updateStockItem.out.json"
+            }
+        },
+        "retrieveSalesOrdersList": {
+            "title": "Retrieve sales orders list",
+            "main": "./lib/actions/retrieveSalesOrdersList.js",
+            "metadata": {
+                "in": "./lib/schemas/retrieveSalesOrdersList.in.json",
+                "out": "./lib/schemas/retrieveSalesOrdersList.out.json"
+            }
+        },
+        "retrieveSalesOrder": {
+            "title": "Retrieve sales order",
+            "main": "./lib/actions/retrieveSalesOrder.js",
+            "metadata": {
+                "in": "./lib/schemas/retrieveSalesOrder.in.json",
+                "out": "./lib/schemas/retrieveSalesOrder.out.json"
+            }
+        },
+        "retrieveSalesOrderComments": {
+            "title": "Retrieve sales order comments",
+            "main": "./lib/actions/retrieveSalesOrderComments.js",
+            "metadata": {
+                "in": "./lib/schemas/retrieveSalesOrderComments.in.json",
+                "out": "./lib/schemas/retrieveSalesOrderComments.out.json"
+            }
+        },
+        "retrieveCustomerAddress": {
+            "title": "Retrieve customer address",
+            "main": "./lib/actions/retrieveCustomerAddress.js",
+            "metadata": {
+                "in": "./lib/schemas/retrieveCustomerAddress.in.json",
+                "out": "./lib/schemas/retrieveCustomerAddress.out.json"
+            }
+        },
+        "deleteCustomerAddress": {
+            "title": "Delete customer address",
+            "main": "./lib/actions/deleteCustomerAddress.js",
+            "metadata": {
+                "in": "./lib/schemas/deleteCustomerAddress.in.json",
+                "out": "./lib/schemas/deleteCustomerAddress.out.json"
+            }
+        },
+        "assignCategoryToProduct": {
+            "title": "Assign category to product",
+            "main": "./lib/actions/assignCategoryToProduct.js",
+            "metadata": {
+                "in": "./lib/schemas/assignCategoryToProduct.in.json",
+                "out": "./lib/schemas/assignCategoryToProduct.out.json"
+            }
+        },
+        "unassignCategoryFromProduct": {
+            "title": "Unassign category from product",
+            "main": "./lib/actions/unassignCategoryFromProduct.js",
+            "metadata": {
+                "in": "./lib/schemas/unassignCategoryFromProduct.in.json",
+                "out": "./lib/schemas/unassignCategoryFromProduct.out.json"
+            }
+        },
+        "retrieveMediaGalleryOfProduct": {
+            "title": "Retrieve media gallery of product",
+            "main": "./lib/actions/retrieveMediaGalleryOfProduct.js",
+            "metadata": {
+                "in": "./lib/schemas/retrieveMediaGalleryOfProduct.in.json",
+                "out": "./lib/schemas/retrieveMediaGalleryOfProduct.out.json"
+            }
+        },
+        "retrieveProductImages": {
+            "title": "Retrieve images list of product",
+            "main": "./lib/actions/retrieveProductImages.js",
+            "metadata": {
+                "in": "./lib/schemas/retrieveProductImages.in.json",
+                "out": "./lib/schemas/retrieveProductImages.out.json"
+            }
+        },
+        "addImageToProduct": {
+            "title": "Add image to product",
+            "main": "./lib/actions/addImageToProduct.js",
+            "metadata": {
+                "in": "./lib/schemas/addImageToProduct.in.json",
+                "out": "./lib/schemas/addImageToProduct.out.json"
+            }
+        },
+        "updateMediaGalleryItem": {
+            "title": "Update media gallery item",
+            "main": "./lib/actions/updateMediaGalleryItem.js",
+            "metadata": {
+                "in": "./lib/schemas/updateMediaGalleryItem.in.json",
+                "out": "./lib/schemas/updateMediaGalleryItem.out.json"
+            }
+        },
+        "assignProductToWebsite": {
+            "title": "Assign product to website",
+            "main": "./lib/actions/assignProductToWebsite.js",
+            "metadata": {
+                "in": "./lib/schemas/assignProductToWebsite.in.json",
+                "out": "./lib/schemas/assignProductToWebsite.out.json"
+            }
+        },
+        "unassignProductFromWebsite": {
+            "title": "Unassign product from website",
+            "main": "./lib/actions/unassignProductFromWebsite.js",
+            "metadata": {
+                "in": "./lib/schemas/unassignProductFromWebsite.in.json",
+                "out": "./lib/schemas/unassignProductFromWebsite.out.json"
+            }
+        }
+    }
+}

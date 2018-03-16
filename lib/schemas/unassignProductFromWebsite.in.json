@@ -1,0 +1,18 @@
+{
+	"type": "object",
+	"properties": {
+		"path": {
+			"type": "object",
+			"properties": {
+				"sku": {
+					"type": "string",
+					"required": true
+				},
+				"websiteId": {
+					"type": "number",
+					"required": true
+				}
+			}
+		}
+	}
+}
