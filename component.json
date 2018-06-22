@@ -1,6 +1,6 @@
 {
     "title": "Magento Version 2",
-    "description": "Magento rest api Version 2",
+    "description": "Magento REST API Version 2",
     "credentials": {
         "fields": {
             "username": {
