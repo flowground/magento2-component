@@ -1,31 +1,32 @@
 {
-    "title":"Magento Version 2",
-    "description" : "Magento rest api",
-    "credentials" : {
-        "fields":{
-          "username": {
-              "viewClass": "TextFieldView",
-              "label": "Username",
-              "required": true,
-              "placeholder": "Paste username"
-          },
-          "password": {
-              "viewClass": "TextFieldView",
-              "label": "Password",
-              "required": true,
-              "placeholder": "Paste password"
-          },
-          "url": {
-              "viewClass": "TextFieldView",
-              "label": "URL",
-              "required": true,
-              "placeholder": "Instance URL"
-          }
+    "title": "Magento Version 2",
+    "description": "Magento rest api",
+    "credentials": {
+        "fields": {
+            "username": {
+                "viewClass": "TextFieldView",
+                "label": "Username",
+                "required": true,
+                "placeholder": "Paste username"
+            },
+            "password": {
+                "viewClass": "TextFieldView",
+                "label": "Password",
+                "required": true,
+                "placeholder": "Paste password"
+            },
+            "url": {
+                "viewClass": "TextFieldView",
+                "label": "URL",
+                "required": true,
+                "placeholder": "Instance URL"
+            }
         }
     },
     "actions": {
         "upsertProduct": {
             "title": "Upsert Product",
+            "description": "Create or update product action",
             "main": "./lib/actions/upsertProduct.js",
             "metadata": {
                 "in": "./lib/schemas/upsertProduct.in.json",
@@ -34,6 +35,7 @@
         },
         "updateInventory": {
             "title": "Update Inventory",
+            "description": "Update inventory action",
             "main": "./lib/actions/updateInventory.js",
             "metadata": {
                 "in": "./lib/schemas/updateInventory.in.json",
@@ -42,6 +44,7 @@
         },
         "deleteProduct": {
             "title": "Delete Product",
+            "description": "Delete product action",
             "main": "./lib/actions/deleteProduct.js",
             "metadata": {
                 "in": "./lib/schemas/deleteProduct.in.json",
@@ -50,6 +53,7 @@
         },
         "createLink": {
             "title": "Create Link",
+            "description": "Create Link action",
             "main": "./lib/actions/createLink.js",
             "metadata": {
                 "in": "./lib/schemas/createLink.in.json",
@@ -58,6 +62,7 @@
         },
         "updateLink": {
             "title": "Update Link",
+            "description": "Update Link action",
             "main": "./lib/actions/updateLink.js",
             "metadata": {
                 "in": "./lib/schemas/updateLink.in.json",
@@ -66,6 +71,7 @@
         },
         "retrieveProductsList": {
             "title": "Retrieve products list",
+            "description": "Retrieve products list action",
             "main": "./lib/actions/retrieveProductsList.js",
             "metadata": {
                 "in": "./lib/schemas/retrieveProductsList.in.json",
@@ -74,6 +80,7 @@
         },
         "retrieveProduct": {
             "title": "Retrieve product",
+            "description": "Retrieve product action",
             "main": "./lib/actions/retrieveProduct.js",
             "metadata": {
                 "in": "./lib/schemas/retrieveProduct.in.json",
@@ -82,6 +89,7 @@
         },
         "retrieveCustomersList": {
             "title": "Retrieve customers list",
+            "description": "Retrieve customers list action",
             "main": "./lib/actions/retrieveCustomersList.js",
             "metadata": {
                 "in": "./lib/schemas/retrieveCustomersList.in.json",
@@ -90,6 +98,7 @@
         },
         "retrieveCustomer": {
             "title": "Retrieve customer",
+            "description": "Retrieve customer action",
             "main": "./lib/actions/retrieveCustomer.js",
             "metadata": {
                 "in": "./lib/schemas/retrieveCustomer.in.json",
@@ -98,6 +107,7 @@
         },
         "createCustomer": {
             "title": "Create customer",
+            "description": "Create customer action",
             "main": "./lib/actions/createCustomer.js",
             "metadata": {
                 "in": "./lib/schemas/createCustomer.in.json",
@@ -106,6 +116,7 @@
         },
         "updateCustomer": {
             "title": "Update customer",
+            "description": "Update customer action",
             "main": "./lib/actions/updateCustomer.js",
             "metadata": {
                 "in": "./lib/schemas/updateCustomer.in.json",
@@ -114,6 +125,7 @@
         },
         "deleteCustomer": {
             "title": "Delete customer",
+            "description": "Delete customer action",
             "main": "./lib/actions/deleteCustomer.js",
             "metadata": {
                 "in": "./lib/schemas/deleteCustomer.in.json",
@@ -122,6 +134,7 @@
         },
         "retrieveStockItem": {
             "title": "Retrieve stock item",
+            "description": "Retrieve stock item action",
             "main": "./lib/actions/retrieveStockItem.js",
             "metadata": {
                 "in": "./lib/schemas/retrieveStockItem.in.json",
@@ -130,6 +143,7 @@
         },
         "retrieveStockItemsList": {
             "title": "Retrieve stock items list",
+            "description": "Retrieve stock items list action",
             "main": "./lib/actions/retrieveStockItemsList.js",
             "metadata": {
                 "in": "./lib/schemas/retrieveStockItemsList.in.json",
@@ -138,6 +152,7 @@
         },
         "updateStockItem": {
             "title": "Update stock item",
+            "description": "Update stock item action",
             "main": "./lib/actions/updateStockItem.js",
             "metadata": {
                 "in": "./lib/schemas/updateStockItem.in.json",
@@ -146,6 +161,7 @@
         },
         "retrieveSalesOrdersList": {
             "title": "Retrieve sales orders list",
+            "description": "Retrieve sales orders list action",
             "main": "./lib/actions/retrieveSalesOrdersList.js",
             "metadata": {
                 "in": "./lib/schemas/retrieveSalesOrdersList.in.json",
@@ -154,6 +170,7 @@
         },
         "retrieveSalesOrder": {
             "title": "Retrieve sales order",
+            "description": "Retrieve sales order action",
             "main": "./lib/actions/retrieveSalesOrder.js",
             "metadata": {
                 "in": "./lib/schemas/retrieveSalesOrder.in.json",
@@ -162,6 +179,7 @@
         },
         "retrieveSalesOrderComments": {
             "title": "Retrieve sales order comments",
+            "description": "Retrieve sales order comments action",
             "main": "./lib/actions/retrieveSalesOrderComments.js",
             "metadata": {
                 "in": "./lib/schemas/retrieveSalesOrderComments.in.json",
@@ -170,6 +188,7 @@
         },
         "retrieveCustomerAddress": {
             "title": "Retrieve customer address",
+            "description": "Retrieve customer address action",
             "main": "./lib/actions/retrieveCustomerAddress.js",
             "metadata": {
                 "in": "./lib/schemas/retrieveCustomerAddress.in.json",
@@ -178,6 +197,7 @@
         },
         "deleteCustomerAddress": {
             "title": "Delete customer address",
+            "description": "Delete customer address action",
             "main": "./lib/actions/deleteCustomerAddress.js",
             "metadata": {
                 "in": "./lib/schemas/deleteCustomerAddress.in.json",
@@ -186,6 +206,7 @@
         },
         "assignCategoryToProduct": {
             "title": "Assign category to product",
+            "description": "Assign category to product action",
             "main": "./lib/actions/assignCategoryToProduct.js",
             "metadata": {
                 "in": "./lib/schemas/assignCategoryToProduct.in.json",
@@ -194,6 +215,7 @@
         },
         "unassignCategoryFromProduct": {
             "title": "Unassign category from product",
+            "description": "Unassign category from product action",
             "main": "./lib/actions/unassignCategoryFromProduct.js",
             "metadata": {
                 "in": "./lib/schemas/unassignCategoryFromProduct.in.json",
@@ -202,6 +224,7 @@
         },
         "retrieveMediaGalleryOfProduct": {
             "title": "Retrieve media gallery of product",
+            "description": "Retrieve media gallery of product action",
             "main": "./lib/actions/retrieveMediaGalleryOfProduct.js",
             "metadata": {
                 "in": "./lib/schemas/retrieveMediaGalleryOfProduct.in.json",
@@ -210,6 +233,7 @@
         },
         "retrieveProductImages": {
             "title": "Retrieve images list of product",
+            "description": "Retrieve images list of product action",
             "main": "./lib/actions/retrieveProductImages.js",
             "metadata": {
                 "in": "./lib/schemas/retrieveProductImages.in.json",
@@ -218,6 +242,7 @@
         },
         "addImageToProduct": {
             "title": "Add image to product",
+            "description": "Add image to product action",
             "main": "./lib/actions/addImageToProduct.js",
             "metadata": {
                 "in": "./lib/schemas/addImageToProduct.in.json",
@@ -226,6 +251,7 @@
         },
         "updateMediaGalleryItem": {
             "title": "Update media gallery item",
+            "description": "Update media gallery item action",
             "main": "./lib/actions/updateMediaGalleryItem.js",
             "metadata": {
                 "in": "./lib/schemas/updateMediaGalleryItem.in.json",
@@ -234,6 +260,7 @@
         },
         "assignProductToWebsite": {
             "title": "Assign product to website",
+            "description": "Assign product to website action",
             "main": "./lib/actions/assignProductToWebsite.js",
             "metadata": {
                 "in": "./lib/schemas/assignProductToWebsite.in.json",
@@ -242,6 +269,7 @@
         },
         "unassignProductFromWebsite": {
             "title": "Unassign product from website",
+            "description": "Unassign product from website action",
             "main": "./lib/actions/unassignProductFromWebsite.js",
             "metadata": {
                 "in": "./lib/schemas/unassignProductFromWebsite.in.json",
