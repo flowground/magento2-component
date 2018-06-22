@@ -20,100 +20,78 @@
 				},
 				"is_in_stock": {
 					"type": "boolean",
-					"description": "Stock Availability",
-					"required": true
+					"description": "Stock Availability"
 				},
 				"is_qty_decimal": {
-					"type": "boolean",
-					"required": true
+					"type": "boolean"
 				},
 				"show_default_notification_message": {
-					"type": "boolean",
-					"required": true
+					"type": "boolean"
 				},
 				"use_config_min_qty": {
-					"type": "boolean",
-					"required": true
+					"type": "boolean"
 				},
 				"min_qty": {
 					"type": "number",
-					"description": "Minimal quantity available for item status in stock",
-					"required": true
+					"description": "Minimal quantity available for item status in stock"
 				},
 				"use_config_min_sale_qty": {
-					"type": "number",
-					"required": true
+					"type": "number"
 				},
 				"min_sale_qty": {
 					"type": "number",
-					"description": "Minimum Qty Allowed in Shopping Cart or NULL when there is no limitation",
-					"required": true
+					"description": "Minimum Qty Allowed in Shopping Cart or NULL when there is no limitation"
 				},
 				"use_config_max_sale_qty": {
-					"type": "boolean",
-					"required": true
+					"type": "boolean"
 				},
 				"max_sale_qty": {
 					"type": "number",
-					"description": "Maximum Qty Allowed in Shopping Cart data wrapper",
-					"required": true
+					"description": "Maximum Qty Allowed in Shopping Cart data wrapper"
 				},
 				"use_config_backorders": {
-					"type": "boolean",
-					"required": true
+					"type": "boolean"
 				},
 				"backorders": {
 					"type": "number",
-					"description": "Backorders status",
-					"required": true
+					"description": "Backorders status"
 				},
 				"use_config_notify_stock_qty": {
-					"type": "boolean",
-					"required": true
+					"type": "boolean"
 				},
 				"notify_stock_qty": {
 					"type": "number",
-					"description": "Notify for Quantity Below data wrapper",
-					"required": true
+					"description": "Notify for Quantity Below data wrapper"
 				},
 				"use_config_qty_increments": {
-					"type": "boolean",
-					"required": true
+					"type": "boolean"
 				},
 				"qty_increments": {
 					"type": "number",
-					"description": "Quantity Increments data wrapper",
-					"required": true
+					"description": "Quantity Increments data wrapper"
 				},
 				"use_config_enable_qty_inc": {
-					"type": "boolean",
-					"required": true
+					"type": "boolean"
 				},
 				"enable_qty_increments": {
 					"type": "boolean",
-					"description": "Whether Quantity Increments is enabled",
-					"required": true
+					"description": "Whether Quantity Increments is enabled"
 				},
 				"use_config_manage_stock": {
-					"type": "boolean",
-					"required": true
+					"type": "boolean"
 				},
 				"manage_stock": {
 					"type": "boolean",
-					"description": "Can Manage Stock",
-					"required": true
-				},
+					"description": "Can Manage Stock"
+                },
 				"low_stock_date": {
-					"type": "string",
-					"required": true
+					"type": "string"
 				},
 				"is_decimal_divided": {
-					"type": "boolean",
-					"required": true
+					"type": "boolean"
 				},
 				"stock_status_changed_auto": {
-					"type": "number",
-					"required": true
+					"type": "number"
 				},
 				"extension_attributes": {
 					"type": "object",
