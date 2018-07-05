@@ -10,7 +10,7 @@
                 "placeholder": "Paste username"
             },
             "password": {
-                "viewClass": "TextFieldView",
+                "viewClass": "PasswordFieldView",
                 "label": "Password",
                 "required": true,
                 "placeholder": "Paste password"
