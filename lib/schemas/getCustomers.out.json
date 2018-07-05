@@ -1,0 +1,165 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "number",
+            "required": false,
+            "title": "ID"
+        },
+        "group_id": {
+            "type": "number",
+            "required": false,
+            "title": "Group ID"
+        },
+        "group_code": {
+            "type": "string",
+            "required": false,
+            "title": "Group Code"
+        },
+        "default_shipping": {
+            "type": "number",
+            "required": false,
+            "title": "Default shipping"
+        },
+        "created_at": {
+            "type": "string",
+            "required": false,
+            "title": "Created At"
+        },
+        "updated_at": {
+            "type": "string",
+            "required": false,
+            "title": "Updated At"
+        },
+        "created_in": {
+            "type": "string",
+            "required": false,
+            "title": "Created In"
+        },
+        "email": {
+            "type": "string",
+            "required": false,
+            "title": "Email"
+        },
+        "firstname": {
+            "type": "string",
+            "required": false,
+            "title": "First Name"
+        },
+        "lastname": {
+            "type": "string",
+            "required": false,
+            "title": "Last Name"
+        },
+        "gender": {
+            "type": "number",
+            "required": false,
+            "title": "Gender"
+        },
+        "store_id": {
+            "type": "number",
+            "required": false,
+            "title": "Store ID"
+        },
+        "taxvat": {
+            "type": "string",
+            "required": false,
+            "title": "Tax VAT"
+        },
+        "website_id": {
+            "type": "number",
+            "required": false,
+            "title": "Website ID"
+        },
+        "disable_auto_group_change": {
+            "type": "boolean",
+            "required": false,
+            "title": "Disable Auto Group Change"
+        },
+        "addresses": {
+            "type": "array",
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "required": false,
+                    "title": "Address ID"
+                },
+                "region": {
+                    "type": "object",
+                    "properties": {
+                        "region_code": {
+                            "type": "string",
+                            "required": false,
+                            "title": "Address Region Code"
+                        },
+                        "region": {
+                            "type": "string",
+                            "required": false,
+                            "title": "Address Region"
+                        },
+                        "region_id": {
+                            "type": "string",
+                            "required": false,
+                            "title": "Address Region ID"
+                        }
+                    }
+                },
+                "country_id": {
+                    "type": "string",
+                    "required": false,
+                    "title": "Address Country ID(2 let format like 'DE')"
+                },
+                "street": {
+                    "type": "array",
+                    "properties": {
+                        "name": {
+                            "type": "string",
+                            "required": false,
+                            "title": "Address Street Name"
+                        }
+                    }
+                },
+                "company": {
+                    "type": "string",
+                    "required": false,
+                    "title": "Address Company"
+                },
+                "telephone": {
+                    "type": "string",
+                    "required": false,
+                    "title": "Address Telephone"
+                },
+                "postcode": {
+                    "type": "string",
+                    "required": false,
+                    "title": "Address Postcode"
+                },
+                "city": {
+                    "type": "string",
+                    "required": false,
+                    "title": "Address City"
+                },
+                "firstname": {
+                    "type": "string",
+                    "required": false,
+                    "title": "Address First Name"
+                },
+                "lastname": {
+                    "type": "string",
+                    "required": false,
+                    "title": "Address Last Name"
+                },
+                "default_shipping": {
+                    "type": "string",
+                    "required": false,
+                    "title": "Address Default Shipping"
+                },
+                "customer_id": {
+                    "type": "string",
+                    "required": false,
+                    "title": "Address Customer ID"
+                }
+            }
+        }
+    }
+}

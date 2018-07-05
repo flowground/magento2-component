@@ -10,7 +10,7 @@
                 "placeholder": "Paste username"
             },
             "password": {
-                "viewClass": "TextFieldView",
+                "viewClass": "PasswordFieldView",
                 "label": "Password",
                 "required": true,
                 "placeholder": "Paste password"
@@ -274,6 +274,24 @@
             "metadata": {
                 "in": "./lib/schemas/unassignProductFromWebsite.in.json",
                 "out": "./lib/schemas/unassignProductFromWebsite.out.json"
+            }
+        }
+    },
+    "triggers": {
+        "getProducts": {
+            "title": "Get Products",
+            "main": "./lib/triggers/getProducts.js",
+            "type": "polling",
+            "metadata": {
+                "out": "./lib/schemas/getProducts.out.json"
+            }
+        },
+        "getCustomers": {
+            "title": "Get Customers",
+            "main": "./lib/triggers/getCustomers.js",
+            "type": "polling",
+            "metadata": {
+                "out": "./lib/schemas/getCustomers.out.json"
             }
         }
     }
