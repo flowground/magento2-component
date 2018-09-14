@@ -28,7 +28,7 @@ module.exports = {
       'single'
     ],
     'semi': [
-      ERROR,
+      IGNORE,
       ALWAYS
     ],
     'func-names': ERROR,
