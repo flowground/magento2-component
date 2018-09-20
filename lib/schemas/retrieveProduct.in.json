@@ -7,7 +7,12 @@
 				"sku": {
 					"type": "string",
 					"required": true
-				}
+				},
+                "store": {
+                    "type": "string",
+                    "required": false,
+                    "enum":["all", "default", "admin", "default_eng"]
+                }
 			}
 		},
 		"query": {
