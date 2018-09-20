@@ -82,10 +82,7 @@
             "title": "Retrieve product",
             "description": "Retrieve product action",
             "main": "./lib/actions/retrieveProduct.js",
-            "metadata": {
-                "in": "./lib/schemas/retrieveProduct.in.json",
-                "out": "./lib/schemas/retrieveProduct.out.json"
-            }
+            "dynamicMetadata": true
         },
         "retrieveCustomersList": {
             "title": "Retrieve customers list",
