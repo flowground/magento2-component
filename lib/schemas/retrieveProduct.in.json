@@ -7,12 +7,7 @@
 				"sku": {
 					"type": "string",
 					"required": true
-				},
-                "store": {
-                    "type": "string",
-                    "required": false,
-                    "enum":[]
-                }
+				}
 			}
 		},
 		"query": {
