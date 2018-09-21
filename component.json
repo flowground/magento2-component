@@ -241,10 +241,7 @@
             "title": "Add image to product",
             "description": "Add image to product action",
             "main": "./lib/actions/addImageToProduct.js",
-            "metadata": {
-                "in": "./lib/schemas/addImageToProduct.in.json",
-                "out": "./lib/schemas/addImageToProduct.out.json"
-            }
+            "dynamicMetadata": true
         },
         "updateMediaGalleryItem": {
             "title": "Update media gallery item",
