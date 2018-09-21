@@ -205,10 +205,7 @@
             "title": "Assign category to product",
             "description": "Assign category to product action",
             "main": "./lib/actions/assignCategoryToProduct.js",
-            "metadata": {
-                "in": "./lib/schemas/assignCategoryToProduct.in.json",
-                "out": "./lib/schemas/assignCategoryToProduct.out.json"
-            }
+            "dynamicMetadata": true
         },
         "unassignCategoryFromProduct": {
             "title": "Unassign category from product",
