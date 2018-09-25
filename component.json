@@ -3,23 +3,29 @@
     "description": "Magento REST API Version 2",
     "credentials": {
         "fields": {
-            "username": {
-                "viewClass": "TextFieldView",
-                "label": "Username",
-                "required": true,
-                "placeholder": "Paste username"
-            },
-            "password": {
-                "viewClass": "PasswordFieldView",
-                "label": "Password",
-                "required": true,
-                "placeholder": "Paste password"
-            },
             "url": {
                 "viewClass": "TextFieldView",
                 "label": "URL",
                 "required": true,
                 "placeholder": "Instance URL"
+            },
+            "username": {
+                "viewClass": "TextFieldView",
+                "label": "Username",
+                "required": false,
+                "placeholder": "Paste username"
+            },
+            "password": {
+                "viewClass": "PasswordFieldView",
+                "label": "Password",
+                "required": false,
+                "placeholder": "Paste password"
+            },
+            "integrationToken": {
+                "viewClass": "TextFieldView",
+                "label": "Integration Token",
+                "required": false,
+                "placeholder": "Past Integration Token"
             }
         }
     },
@@ -192,7 +198,7 @@
             "main": "./lib/actions/unassignProductFromWebsite.js",
             "dynamicMetadata": true
         }
-    },
+    },Integration Token
     "triggers": {
         "getProducts": {
             "title": "Get Products",
