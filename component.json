@@ -198,7 +198,7 @@
             "main": "./lib/actions/unassignProductFromWebsite.js",
             "dynamicMetadata": true
         }
-    },Integration Token
+    },
     "triggers": {
         "getProducts": {
             "title": "Get Products",
