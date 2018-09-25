@@ -6,6 +6,7 @@ module.exports = verify;
 
 function verify(credentials, callback) {
     (async () => {
+        console.log('Credentials', credentials)
         if (!(credentials.username && credentials.password && credentials.integrationToken)) {
             try {
                 let token = await getToken(credentials);
