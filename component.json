@@ -198,6 +198,15 @@
             "title": "Get Products",
             "main": "./lib/triggers/getProducts.js",
             "type": "polling",
+            "fields": {
+                "store": {
+                    "viewClass": "SelectView",
+                    "label": "Store",
+                    "required": false,
+                    "model": "getStoreCodeSelectModel",
+                    "prompt": "Please select a store"
+                }
+            },
             "metadata": {
                 "out": "./lib/schemas/getProducts.out.json"
             }
@@ -206,6 +215,15 @@
             "title": "Get Customers",
             "main": "./lib/triggers/getCustomers.js",
             "type": "polling",
+            "fields": {
+                "store": {
+                    "viewClass": "SelectView",
+                    "label": "Store",
+                    "required": false,
+                    "model": "getStoreCodeSelectModel",
+                    "prompt": "Please select a store"
+                }
+            },
             "metadata": {
                 "out": "./lib/schemas/getCustomers.out.json"
             }
