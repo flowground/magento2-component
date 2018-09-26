@@ -1,6 +1,6 @@
 version: 2
 jobs:
-    integrationTest:
+    test:
         docker:
         - image: circleci/node:8-stretch
         steps:
@@ -16,9 +16,9 @@ jobs:
               - node_modules
         - run:
               name: Running Mocha Integration Tests
-              command: npm run integration-test
+              command: npm test && npm run integration-test
 workflows:
     version: 2
     build_and_test:
         jobs:
-        - integrationTest
+        - test
