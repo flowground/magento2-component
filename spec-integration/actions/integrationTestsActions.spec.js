@@ -20,7 +20,6 @@ describe('Integration Test', function () {
     let customerAddressCity;
     let productSku;
     let productName;
-    let imageId;
     let cfg;
     let emitter;
 
@@ -39,7 +38,6 @@ describe('Integration Test', function () {
         customerAddressCity = process.env.MAGENTO2_CUSTOMERADDRESSCITY;
         productSku = process.env.MAGENTO2_PRODUCTSKU;
         productName = process.env.MAGENTO2_PRODUCTNAME;
-        imageId = process.env.MAGENTO2_IMAGEID;
     });
 
     beforeEach(function () {
@@ -110,7 +108,7 @@ describe('Integration Test', function () {
             };
             await actionRetrieveProductImages.process.call(emitter, msg, cfg, null);
 
-            expect(emitter.emit.getCall(0).args[1].body.responseData[0].id).to.be.equal(imageId);
+            expect(emitter.emit.getCall(0).args[1].body.responseData[0].media_type).to.be.equal('image');
         });
     });
 });
