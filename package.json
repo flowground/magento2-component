@@ -11,7 +11,7 @@
     "scripts": {
         "test": "NODE_ENV=test ./node_modules/mocha/bin/mocha --recursive spec",
         "coverage": "NODE_ENV=test ./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha --recursive ./spec/*",
-        "integration-test": "mocha --recursive spec-integration"
+        "integration-test": "NODE_ENV=integration-test ./node_modules/mocha/bin/mocha --recursive spec-integration"
     },
     "keywords": [
         "",
