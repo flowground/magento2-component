@@ -200,6 +200,30 @@
         }
     },
     "triggers": {
+        "getObjects": {
+            "title": "Get Objects",
+            "main": "./lib/triggers/getObjects.js",
+            "type": "polling",
+            "fields": {
+                "pollingObject": {
+                    "viewClass": "SelectView",
+                    "label": "Polling Object",
+                    "required": true,
+                    "model": "getObjectSelectModel",
+                    "prompt": "Please select an object"
+                },
+                "store": {
+                    "viewClass": "SelectView",
+                    "label": "Store",
+                    "required": false,
+                    "model": "getStoreCodeSelectModel",
+                    "prompt": "Please select a store"
+                }
+            },
+            "metadata": {
+                "out": "./lib/schemas/getProducts.out.json"
+            }
+        },
         "getProducts": {
             "title": "Get Products",
             "main": "./lib/triggers/getProducts.js",
