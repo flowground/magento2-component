@@ -1,7 +1,7 @@
 const chai = require('chai');
 const expect = chai.expect;
 const fs = require('fs');
-const {getToken, getBaseUrlAndService, getStoreCodes, getStoreCodeSelectModel} = require('../../lib/helpers');
+const {getToken, getBaseUrlAndService, getStoreCodes, getStoreCodeSelectModel} = require('../lib/helpers');
 
 describe('Unit test for helpers class methods', function () {
     let url;
