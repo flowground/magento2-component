@@ -25,7 +25,7 @@
                 "viewClass": "TextFieldView",
                 "label": "Integration Token",
                 "required": false,
-                "placeholder": "Past Integration Token"
+                "placeholder": "Paste Integration Token"
             }
         }
     },
@@ -201,7 +201,8 @@
     },
     "triggers": {
         "getObjects": {
-            "title": "Get Objects",
+            "title": "Fetch new and updated objects (getObjects - Polling)",
+            "description": "Get objects which have recently been modified or created",
             "main": "./lib/triggers/getObjects.js",
             "type": "polling",
             "fields": {

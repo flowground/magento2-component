@@ -1,39 +1,35 @@
 const axios = require('axios');
-const {getToken} = require('./lib/helpers');
+const {getToken, verifyConfig} = require('./lib/helpers');
 
 
 module.exports = verify;
 
 function verify(credentials, callback) {
     (async () => {
-        if (!(credentials.username && credentials.password && credentials.integrationToken)) {
-            try {
-                let token = await getToken(credentials);
-                if (token !== null) {
-                    const baseUrl = `${credentials.url}/rest/all/V1`;
+        try {
+            await verifyConfig(credentials);
+            let token = await getToken(credentials);
+            if (token !== null) {
+                const baseUrl = `${credentials.url}/rest/all/V1`;
 
-                    const service = await axios.create({
-                        baseUrl,
-                        validateStatus: status => [200, 201, 404].includes(status),
-                        headers: {
-                            Authorization: `Bearer ${token}`
-                        }
-                    });
+                const service = await axios.create({
+                    baseUrl,
+                    validateStatus: status => [200, 201, 404].includes(status),
+                    headers: {
+                        Authorization: `Bearer ${token}`
+                    }
+                });
 
-                    const response = await service.get(`${baseUrl}/customers/search?searchCriteria[pageSize]=1`);
-                    console.log('Status Text', response.statusText);
-                    callback(null, response.statusText === 'OK');
-                } else {
-                    console.error('Credentials are not valid');
-                    return callback(new Error('Credentials are not valid'));
-                }
-            } catch (e) {
-                console.error(e);
-                callback(e);
+                const response = await service.get(`${baseUrl}/customers/search?searchCriteria[pageSize]=1`);
+                console.log('Status Text', response.statusText);
+                callback(null, response.statusText === 'OK');
+            } else {
+                console.error('Credentials are not valid');
+                return callback(new Error('Credentials are not valid'));
             }
-        } else {
-            console.error('You need to use one of options: Username and Password or Integration Token');
-            return callback(new Error('You need to use one of options: Username and Password or Integration Token'));
+        } catch (e) {
+            console.error(e);
+            callback(e);
         }
     })();
 }
