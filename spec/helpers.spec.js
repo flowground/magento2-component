@@ -1,7 +1,7 @@
 const chai = require('chai');
 const nock = require('nock');
 const expect = chai.expect;
-const {getToken, getBaseUrlAndService} = require('../lib/helpers');
+const {getToken, getBaseUrlAndService, getStoreCodes, getStoreCodeSelectModel} = require('../lib/helpers');
 
 describe('Unit test for helpers class methods', function () {
     let url = 'http://example.com';
@@ -9,8 +9,21 @@ describe('Unit test for helpers class methods', function () {
     let password = 'password';
     let integrationToken = 'integrationToken';
     let cfg;
-    let store = 'all';
     let msg;
+    let store = 'all';
+    let storeCfg = [
+        {
+            code: 'default'
+        },
+        {
+            code: 'admin'
+        }
+    ];
+    let regHeaders = {
+        reqheaders: {
+            authorization: 'Bearer integrationToken'
+        }
+    };
 
     describe('Test getToken with token', () => {
         it('Set Token to config', async () => {
@@ -102,6 +115,48 @@ describe('Unit test for helpers class methods', function () {
             msg = {};
             const result = await getBaseUrlAndService(msg, cfg);
             expect(result.baseUrl).to.deep.eq(url + '/rest/V1');
+        });
+    });
+    describe('Test getStoreCodes', () => {
+        it('First arg need to be "all"', async () => {
+            nock(url)
+                .post('/rest/V1/integration/admin/token', {
+                    username,
+                    password
+                })
+                .reply(200, integrationToken);
+            nock(url, regHeaders)
+                .get('/rest/V1/store/storeViews')
+                .reply(200, storeCfg);
+            cfg = {
+                url,
+                username,
+                password
+            };
+            const result = await getStoreCodes(cfg);
+            expect(result).to.deep.eq(['all', 'default', 'admin']);
+        });
+    });
+    describe('Test getStoreCodeSelectModel', () => {
+        it('First arg need to be "all"', async () => {
+            nock(url)
+                .post('/rest/V1/integration/admin/token', {
+                    integrationToken
+                })
+                .reply(200, integrationToken);
+            nock(url, regHeaders)
+                .get('/rest/V1/store/storeViews')
+                .reply(200, storeCfg);
+            cfg = {
+                url,
+                integrationToken
+            };
+            const result = await getStoreCodeSelectModel(cfg);
+            expect(result).to.deep.eq({
+                all: 'all',
+                default: 'default',
+                admin: 'admin'
+            });
         });
     });
 });
