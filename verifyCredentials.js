@@ -1,42 +1,34 @@
 const axios = require('axios');
+const {getToken, verifyConfig} = require('./lib/helpers');
+
 
 module.exports = verify;
 
 function verify(credentials, callback) {
     (async () => {
-        let result;
-
         try {
-            result = await axios.post(
-                `${credentials.url}/rest/V1/integration/admin/token`, {
-                    username: credentials.username,
-                    password: credentials.password
-                }
-            );
+            await verifyConfig(credentials);
+            let token = await getToken(credentials);
+            if (token !== null) {
+                const baseUrl = `${credentials.url}/rest/all/V1`;
 
-            console.log('result.data', result.data);
+                const service = await axios.create({
+                    baseUrl,
+                    validateStatus: status => [200, 201, 404].includes(status),
+                    headers: {
+                        Authorization: `Bearer ${token}`
+                    }
+                });
 
-            if (!result || !result.data) {
-                return callback(new Error('creds are not valid'));
+                const response = await service.get(`${baseUrl}/customers/search?searchCriteria[pageSize]=1`);
+                console.log('Status Text', response.statusText);
+                callback(null, response.statusText === 'OK');
+            } else {
+                console.error('Credentials are not valid');
+                return callback(new Error('Credentials are not valid'));
             }
-
-            // testing api url, trying to retrieve a list of customers
-            const baseUrl = `${credentials.url}/rest/all/V1`;
-
-            const service = await axios.create({
-                baseUrl,
-                validateStatus: status => [200, 201, 404].includes(status),
-                headers: {
-                    Authorization: `Bearer ${result.data}`
-                }
-            });
-
-            const response = await service.get(`${baseUrl}/customers/search?searchCriteria[pageSize]=1`);
-
-            callback(null, response.statusText === 'OK');
         } catch (e) {
             console.error(e);
-
             callback(e);
         }
     })();

@@ -3,23 +3,29 @@
     "description": "Magento REST API Version 2",
     "credentials": {
         "fields": {
-            "username": {
-                "viewClass": "TextFieldView",
-                "label": "Username",
-                "required": true,
-                "placeholder": "Paste username"
-            },
-            "password": {
-                "viewClass": "PasswordFieldView",
-                "label": "Password",
-                "required": true,
-                "placeholder": "Paste password"
-            },
             "url": {
                 "viewClass": "TextFieldView",
                 "label": "URL",
                 "required": true,
                 "placeholder": "Instance URL"
+            },
+            "username": {
+                "viewClass": "TextFieldView",
+                "label": "Username",
+                "required": false,
+                "placeholder": "Paste username"
+            },
+            "password": {
+                "viewClass": "PasswordFieldView",
+                "label": "Password",
+                "required": false,
+                "placeholder": "Paste password"
+            },
+            "integrationToken": {
+                "viewClass": "TextFieldView",
+                "label": "Integration Token",
+                "required": false,
+                "placeholder": "Paste Integration Token"
             }
         }
     },
@@ -28,260 +34,210 @@
             "title": "Upsert Product",
             "description": "Create or update product action",
             "main": "./lib/actions/upsertProduct.js",
-            "metadata": {
-                "in": "./lib/schemas/upsertProduct.in.json",
-                "out": "./lib/schemas/upsertProduct.out.json"
-            }
+            "dynamicMetadata": true
         },
         "updateInventory": {
             "title": "Update Inventory",
             "description": "Update inventory action",
             "main": "./lib/actions/updateInventory.js",
-            "metadata": {
-                "in": "./lib/schemas/updateInventory.in.json",
-                "out": "./lib/schemas/updateInventory.out.json"
-            }
+            "dynamicMetadata": true
         },
         "deleteProduct": {
             "title": "Delete Product",
             "description": "Delete product action",
             "main": "./lib/actions/deleteProduct.js",
-            "metadata": {
-                "in": "./lib/schemas/deleteProduct.in.json",
-                "out": "./lib/schemas/deleteProduct.out.json"
-            }
+            "dynamicMetadata": true
         },
         "createLink": {
             "title": "Create Link",
             "description": "Create Link action",
             "main": "./lib/actions/createLink.js",
-            "metadata": {
-                "in": "./lib/schemas/createLink.in.json",
-                "out": "./lib/schemas/createLink.out.json"
-            }
+            "dynamicMetadata": true
         },
         "updateLink": {
             "title": "Update Link",
             "description": "Update Link action",
             "main": "./lib/actions/updateLink.js",
-            "metadata": {
-                "in": "./lib/schemas/updateLink.in.json",
-                "out": "./lib/schemas/updateLink.out.json"
-            }
+            "dynamicMetadata": true
         },
         "retrieveProductsList": {
             "title": "Retrieve products list",
             "description": "Retrieve products list action",
             "main": "./lib/actions/retrieveProductsList.js",
-            "metadata": {
-                "in": "./lib/schemas/retrieveProductsList.in.json",
-                "out": "./lib/schemas/retrieveProductsList.out.json"
-            }
+            "dynamicMetadata": true
         },
         "retrieveProduct": {
             "title": "Retrieve product",
             "description": "Retrieve product action",
             "main": "./lib/actions/retrieveProduct.js",
-            "metadata": {
-                "in": "./lib/schemas/retrieveProduct.in.json",
-                "out": "./lib/schemas/retrieveProduct.out.json"
-            }
+            "dynamicMetadata": true
         },
         "retrieveCustomersList": {
             "title": "Retrieve customers list",
             "description": "Retrieve customers list action",
             "main": "./lib/actions/retrieveCustomersList.js",
-            "metadata": {
-                "in": "./lib/schemas/retrieveCustomersList.in.json",
-                "out": "./lib/schemas/retrieveCustomersList.out.json"
-            }
+            "dynamicMetadata": true
         },
         "retrieveCustomer": {
             "title": "Retrieve customer",
             "description": "Retrieve customer action",
             "main": "./lib/actions/retrieveCustomer.js",
-            "metadata": {
-                "in": "./lib/schemas/retrieveCustomer.in.json",
-                "out": "./lib/schemas/retrieveCustomer.out.json"
-            }
+            "dynamicMetadata": true
         },
         "createCustomer": {
             "title": "Create customer",
             "description": "Create customer action",
             "main": "./lib/actions/createCustomer.js",
-            "metadata": {
-                "in": "./lib/schemas/createCustomer.in.json",
-                "out": "./lib/schemas/createCustomer.out.json"
-            }
+            "dynamicMetadata": true
         },
         "updateCustomer": {
             "title": "Update customer",
             "description": "Update customer action",
             "main": "./lib/actions/updateCustomer.js",
-            "metadata": {
-                "in": "./lib/schemas/updateCustomer.in.json",
-                "out": "./lib/schemas/updateCustomer.out.json"
-            }
+            "dynamicMetadata": true
         },
         "deleteCustomer": {
             "title": "Delete customer",
             "description": "Delete customer action",
             "main": "./lib/actions/deleteCustomer.js",
-            "metadata": {
-                "in": "./lib/schemas/deleteCustomer.in.json",
-                "out": "./lib/schemas/deleteCustomer.out.json"
-            }
+            "dynamicMetadata": true
         },
         "retrieveStockItem": {
             "title": "Retrieve stock item",
             "description": "Retrieve stock item action",
             "main": "./lib/actions/retrieveStockItem.js",
-            "metadata": {
-                "in": "./lib/schemas/retrieveStockItem.in.json",
-                "out": "./lib/schemas/retrieveStockItem.out.json"
-            }
+            "dynamicMetadata": true
         },
         "retrieveStockItemsList": {
             "title": "Retrieve stock items list",
             "description": "Retrieve stock items list action",
             "main": "./lib/actions/retrieveStockItemsList.js",
-            "metadata": {
-                "in": "./lib/schemas/retrieveStockItemsList.in.json",
-                "out": "./lib/schemas/retrieveStockItemsList.out.json"
-            }
+            "dynamicMetadata": true
         },
         "updateStockItem": {
             "title": "Update stock item",
             "description": "Update stock item action",
             "main": "./lib/actions/updateStockItem.js",
-            "metadata": {
-                "in": "./lib/schemas/updateStockItem.in.json",
-                "out": "./lib/schemas/updateStockItem.out.json"
-            }
+            "dynamicMetadata": true
         },
         "retrieveSalesOrdersList": {
             "title": "Retrieve sales orders list",
             "description": "Retrieve sales orders list action",
             "main": "./lib/actions/retrieveSalesOrdersList.js",
-            "metadata": {
-                "in": "./lib/schemas/retrieveSalesOrdersList.in.json",
-                "out": "./lib/schemas/retrieveSalesOrdersList.out.json"
-            }
+            "dynamicMetadata": true
         },
         "retrieveSalesOrder": {
             "title": "Retrieve sales order",
             "description": "Retrieve sales order action",
             "main": "./lib/actions/retrieveSalesOrder.js",
-            "metadata": {
-                "in": "./lib/schemas/retrieveSalesOrder.in.json",
-                "out": "./lib/schemas/retrieveSalesOrder.out.json"
-            }
+            "dynamicMetadata": true
         },
         "retrieveSalesOrderComments": {
             "title": "Retrieve sales order comments",
             "description": "Retrieve sales order comments action",
             "main": "./lib/actions/retrieveSalesOrderComments.js",
-            "metadata": {
-                "in": "./lib/schemas/retrieveSalesOrderComments.in.json",
-                "out": "./lib/schemas/retrieveSalesOrderComments.out.json"
-            }
+            "dynamicMetadata": true
         },
         "retrieveCustomerAddress": {
             "title": "Retrieve customer address",
             "description": "Retrieve customer address action",
             "main": "./lib/actions/retrieveCustomerAddress.js",
-            "metadata": {
-                "in": "./lib/schemas/retrieveCustomerAddress.in.json",
-                "out": "./lib/schemas/retrieveCustomerAddress.out.json"
-            }
+            "dynamicMetadata": true
         },
         "deleteCustomerAddress": {
             "title": "Delete customer address",
             "description": "Delete customer address action",
             "main": "./lib/actions/deleteCustomerAddress.js",
-            "metadata": {
-                "in": "./lib/schemas/deleteCustomerAddress.in.json",
-                "out": "./lib/schemas/deleteCustomerAddress.out.json"
-            }
+            "dynamicMetadata": true
         },
         "assignCategoryToProduct": {
             "title": "Assign category to product",
             "description": "Assign category to product action",
             "main": "./lib/actions/assignCategoryToProduct.js",
-            "metadata": {
-                "in": "./lib/schemas/assignCategoryToProduct.in.json",
-                "out": "./lib/schemas/assignCategoryToProduct.out.json"
-            }
+            "dynamicMetadata": true
         },
         "unassignCategoryFromProduct": {
             "title": "Unassign category from product",
             "description": "Unassign category from product action",
             "main": "./lib/actions/unassignCategoryFromProduct.js",
-            "metadata": {
-                "in": "./lib/schemas/unassignCategoryFromProduct.in.json",
-                "out": "./lib/schemas/unassignCategoryFromProduct.out.json"
-            }
+            "dynamicMetadata": true
         },
         "retrieveMediaGalleryOfProduct": {
             "title": "Retrieve media gallery of product",
             "description": "Retrieve media gallery of product action",
             "main": "./lib/actions/retrieveMediaGalleryOfProduct.js",
-            "metadata": {
-                "in": "./lib/schemas/retrieveMediaGalleryOfProduct.in.json",
-                "out": "./lib/schemas/retrieveMediaGalleryOfProduct.out.json"
-            }
+            "dynamicMetadata": true
         },
         "retrieveProductImages": {
             "title": "Retrieve images list of product",
             "description": "Retrieve images list of product action",
             "main": "./lib/actions/retrieveProductImages.js",
-            "metadata": {
-                "in": "./lib/schemas/retrieveProductImages.in.json",
-                "out": "./lib/schemas/retrieveProductImages.out.json"
-            }
+            "dynamicMetadata": true
         },
         "addImageToProduct": {
             "title": "Add image to product",
             "description": "Add image to product action",
             "main": "./lib/actions/addImageToProduct.js",
-            "metadata": {
-                "in": "./lib/schemas/addImageToProduct.in.json",
-                "out": "./lib/schemas/addImageToProduct.out.json"
-            }
+            "dynamicMetadata": true
         },
         "updateMediaGalleryItem": {
             "title": "Update media gallery item",
             "description": "Update media gallery item action",
             "main": "./lib/actions/updateMediaGalleryItem.js",
-            "metadata": {
-                "in": "./lib/schemas/updateMediaGalleryItem.in.json",
-                "out": "./lib/schemas/updateMediaGalleryItem.out.json"
-            }
+            "dynamicMetadata": true
         },
         "assignProductToWebsite": {
             "title": "Assign product to website",
             "description": "Assign product to website action",
             "main": "./lib/actions/assignProductToWebsite.js",
-            "metadata": {
-                "in": "./lib/schemas/assignProductToWebsite.in.json",
-                "out": "./lib/schemas/assignProductToWebsite.out.json"
-            }
+            "dynamicMetadata": true
         },
         "unassignProductFromWebsite": {
             "title": "Unassign product from website",
             "description": "Unassign product from website action",
             "main": "./lib/actions/unassignProductFromWebsite.js",
-            "metadata": {
-                "in": "./lib/schemas/unassignProductFromWebsite.in.json",
-                "out": "./lib/schemas/unassignProductFromWebsite.out.json"
-            }
+            "dynamicMetadata": true
         }
     },
     "triggers": {
+        "getObjects": {
+            "title": "Fetch new and updated objects (getObjects - Polling)",
+            "description": "Get objects which have recently been modified or created",
+            "main": "./lib/triggers/getObjects.js",
+            "type": "polling",
+            "fields": {
+                "pollingObject": {
+                    "viewClass": "SelectView",
+                    "label": "Polling Object",
+                    "required": true,
+                    "model": "getObjectSelectModel",
+                    "prompt": "Please select an object"
+                },
+                "store": {
+                    "viewClass": "SelectView",
+                    "label": "Store",
+                    "required": false,
+                    "model": "getStoreCodeSelectModel",
+                    "prompt": "Please select a store"
+                }
+            },
+            "metadata": {
+                "out": "./lib/schemas/getProducts.out.json"
+            }
+        },
         "getProducts": {
             "title": "Get Products",
             "main": "./lib/triggers/getProducts.js",
             "type": "polling",
+            "fields": {
+                "store": {
+                    "viewClass": "SelectView",
+                    "label": "Store",
+                    "required": false,
+                    "model": "getStoreCodeSelectModel",
+                    "prompt": "Please select a store"
+                }
+            },
             "metadata": {
                 "out": "./lib/schemas/getProducts.out.json"
             }
@@ -290,6 +246,15 @@
             "title": "Get Customers",
             "main": "./lib/triggers/getCustomers.js",
             "type": "polling",
+            "fields": {
+                "store": {
+                    "viewClass": "SelectView",
+                    "label": "Store",
+                    "required": false,
+                    "model": "getStoreCodeSelectModel",
+                    "prompt": "Please select a store"
+                }
+            },
             "metadata": {
                 "out": "./lib/schemas/getCustomers.out.json"
             }

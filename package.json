@@ -1,46 +1,48 @@
 {
-  "name": "magento-2-component",
-  "version": "1.0.0",
-  "description": "",
-  "homepage": "",
-  "author": {
-    "name": "Dmytro Nalyvaiko",
-    "email": "dmytro@elastic.io",
-    "url": ""
-  },
-  "scripts": {
-    "test": "NODE_ENV=test ./node_modules/mocha/bin/mocha --recursive spec",
-    "coverage": "NODE_ENV=test ./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha --recursive ./spec/*"
-  },
-  "keywords": [
-    "",
-    "elasticio-component"
-  ],
-  "dependencies": {
-    "axios": "^0.15.3",
-    "debug": "^3.1.0",
-    "elasticio-node": "0.0.8",
-    "elasticio-sailor-nodejs": "2.2.1",
-    "eslint": "^3.16.1",
-    "lodash": "^4.17.5"
-  },
-  "devDependencies": {
-    "eslint": "^3.1.1",
-    "eslint-config-xo-space": "^0.15.0",
-    "istanbul": "^0.4.5",
-    "mocha": "^3.2.0",
-    "nock": "^9.0.9",
-    "sinon": "^1.17.7"
-  },
-  "engines": {
-    "node": "8.1"
-  },
-  "eslintConfig": {
-    "extends": "xo-space",
-    "env": {
-      "mocha": true
-    }
-  },
-  "repository": "/magento-2-component",
-  "private": true
+    "name": "magento-2-component",
+    "version": "1.0.0",
+    "description": "",
+    "homepage": "",
+    "author": {
+        "name": "Dmytro Nalyvaiko",
+        "email": "dmytro@elastic.io",
+        "url": ""
+    },
+    "scripts": {
+        "test": "NODE_ENV=test ./node_modules/mocha/bin/mocha --recursive spec",
+        "coverage": "NODE_ENV=test ./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha --recursive ./spec/*",
+        "integration-test": "NODE_ENV=integration-test ./node_modules/mocha/bin/mocha --recursive spec-integration"
+    },
+    "keywords": [
+        "",
+        "elasticio-component"
+    ],
+    "dependencies": {
+        "axios": "^0.15.3",
+        "debug": "^3.1.0",
+        "elasticio-node": "0.0.8",
+        "elasticio-sailor-nodejs": "2.2.1",
+        "eslint": "^3.16.1",
+        "lodash": "^4.17.5"
+    },
+    "devDependencies": {
+        "eslint": "^3.1.1",
+        "eslint-config-xo-space": "^0.15.0",
+        "istanbul": "^0.4.5",
+        "mocha": "^3.2.0",
+        "nock": "^9.0.9",
+        "sinon": "^1.17.7",
+        "dotenv": "^6.0.0"
+    },
+    "engines": {
+        "node": "8.1"
+    },
+    "eslintConfig": {
+        "extends": "xo-space",
+        "env": {
+            "mocha": true
+        }
+    },
+    "repository": "/magento-2-component",
+    "private": true
 }
