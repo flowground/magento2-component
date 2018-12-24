@@ -9,7 +9,6 @@ const getCustomerGroupsResponse = require('../testData/getCustomerGroupsResponse
 const getCustomersResponse = require('../testData/getCustomersResponse');
 const getEmptyCustomersResponse = require('../testData/getEmptyCustomersResponse');
 
-const emit = sinon.spy();
 const cfg = {
     url: 'http://localhost',
     username: 'magento overlord',
@@ -23,7 +22,9 @@ const regHeaders = {
 };
 
 describe('Magento 2 getProducts trigger', () => {
+
     it('should works (without snapshot)', async () => {
+        const emit = sinon.spy();
         nock(cfg.url)
             .post('/rest/V1/integration/admin/token', {
                 username: cfg.username,
@@ -44,6 +45,7 @@ describe('Magento 2 getProducts trigger', () => {
     });
 
     it('should works (with snapshot', async () => {
+        const emit = sinon.spy();
         nock(cfg.url)
             .post('/rest/V1/integration/admin/token', {
                 username: cfg.username,
