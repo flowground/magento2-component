@@ -1,0 +1,17 @@
+{
+    "items": [],
+    "search_criteria": {
+        "filter_groups": [
+            {
+                "filters": [
+                    {
+                        "field": "updated_at",
+                        "value": "2018-10-02 12:40:08",
+                        "condition_type": "gt"
+                    }
+                ]
+            }
+        ]
+    },
+    "total_count": 0
+}

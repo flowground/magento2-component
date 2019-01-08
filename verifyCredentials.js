@@ -21,7 +21,7 @@ function verify(credentials, callback) {
             }
 
             // testing api url, trying to retrieve a list of customers
-            const baseUrl = `${credentials.url}/rest/all/V1`;
+            const baseUrl = `${credentials.url}/rest/V1`;
 
             const service = await axios.create({
                 baseUrl,

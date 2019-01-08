@@ -31,3 +31,7 @@ auth with:
 ### Magento2 API links
  - http://devdocs.magento.com/guides/v2.0/rest/bk-rest.html
  - http://devdocs.magento.com/swagger/
+
+### Known limitations
+Current component version was tested with Magento2 v2.1.14. 
+Сorrect component behavior is not guaranteed for other Magento2 versions.
